@@ -43,15 +43,15 @@
 - [x] 修复 Ubuntu 24.04 上 Codex bubblewrap/AppArmor sandbox
 - [x] 验证 Codex 可在只读沙箱内调用 shell
 
-## GitHub（暂缓）
+## GitHub
 
 - [x] 在 `E:\2026-linux` 初始化本地 Git 仓库
 - [x] 创建首次提交：`3ad1724 Add Linux networking study notes`
-- [ ] 创建 GitHub public 仓库 `2026-linux`
-- [ ] 添加 GitHub remote `origin`
-- [ ] 推送 `main` 分支
-- [ ] 验证 GitHub 上的 README 和 notes 文件完整
-- [ ] 确定今后每个实验通过验收后是否自动提交
+- [x] 创建 GitHub public 仓库 `2026-linux`
+- [x] 添加 GitHub remote `origin`
+- [x] 推送 `main` 分支
+- [x] 验证 GitHub 上的 README 和 notes 文件完整
+- [x] 今后课程新增或更新文档时，在当次任务完成后提交并推送
 
 ## 每个实验的固定验收问题
 
@@ -60,4 +60,3 @@
 - [ ] `tcpdump` 能看到什么？
 - [ ] 如果失败，我应该从哪里开始排查？
 - [ ] 这个知识与 Linux Driver、BLE、Digital Key 有什么关系？
-
