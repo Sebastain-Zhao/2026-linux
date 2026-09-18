@@ -36,6 +36,9 @@
 
 - [x] 建立课程总记录 `README.md`
 - [x] 建立实验笔记目录 `notes/`
+- [x] 审计 Ubuntu 网络、内核、BLE、编译与串口基础环境
+- [ ] 执行 `scripts/setup_ubuntu_lab.sh` 并重新登录
+- [ ] 运行 `scripts/check_lab_environment.sh`，得到 `ENVIRONMENT_OK`
 - [x] 通过 SSH 连接 Ubuntu 主机 `seb@192.168.31.195`
 - [x] 排查“浏览器可访问 Google，但 ping 无响应”
 - [x] 验证 FlClash HTTP 代理与 Meta TUN 路由
