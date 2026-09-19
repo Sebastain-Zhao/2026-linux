@@ -27,6 +27,7 @@
 
 - `tcpdump` 不授予系统范围 capability，实时抓包时仍使用 `sudo tcpdump`。
 - Wireshark/TShark 通过受限的 `dumpcap` 和 `wireshark` 用户组支持普通用户抓包。
+- 串口设备通过 `dialout` 用户组授权，不为串口工具使用 root 身份。
 - SSH 私钥、令牌和其他凭据不得写入项目或 Git。
 
 ## 操作
@@ -56,6 +57,6 @@ sudo ./scripts/setup_ubuntu_lab.sh
 
 - 验收脚本最终输出 `ENVIRONMENT_OK`
 - 当前登录会话属于 `wireshark` 用户组
+- 当前登录会话属于 `dialout` 用户组
 - `bluetooth.service` 为 active
 - 当前内核版本对应的 headers 存在
-

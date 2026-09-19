@@ -68,11 +68,10 @@ apt-get install -y \
     curl \
     git
 
-usermod -aG wireshark "${lab_user}"
+usermod -aG wireshark,dialout "${lab_user}"
 systemctl enable --now bluetooth
 
 echo
 echo "基础环境安装完成。"
-echo "请注销并重新登录，使 wireshark 用户组立即生效。"
+echo "请注销并重新登录，使 wireshark 和 dialout 用户组立即生效。"
 echo "重新登录后运行：./scripts/check_lab_environment.sh"
-

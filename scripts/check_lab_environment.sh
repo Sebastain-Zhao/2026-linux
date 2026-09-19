@@ -30,6 +30,13 @@ else
     missing=1
 fi
 
+if id -nG | tr ' ' '\n' | grep -qx dialout; then
+    echo "OK      当前会话已加入 dialout 组"
+else
+    echo "PENDING 当前会话尚未加入 dialout 组；请注销并重新登录"
+    missing=1
+fi
+
 echo
 echo "== 内核与蓝牙检查 =="
 kernel_release=$(uname -r)
@@ -55,4 +62,3 @@ else
 fi
 
 exit "${missing}"
-
