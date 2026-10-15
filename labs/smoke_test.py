@@ -61,7 +61,7 @@ def main() -> None:
     nc_server = subprocess.Popen(["nc", "-l", "-s", "127.0.0.1", "-p", "8877"], stdout=subprocess.PIPE, text=True)
     try:
         time.sleep(0.15)
-        subprocess.run(["nc", "127.0.0.1", "8877"], input="NC_OK\n", text=True, timeout=3, check=True)
+        subprocess.run(["nc", "-N", "127.0.0.1", "8877"], input="NC_OK\n", text=True, timeout=3, check=True)
         output, _ = nc_server.communicate(timeout=3)
         check("Netcat TCP", output.strip() == "NC_OK", output.strip())
     finally:
