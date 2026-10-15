@@ -36,6 +36,9 @@
 
 - [x] 建立课程总记录 `README.md`
 - [x] 建立实验笔记目录 `notes/`
+- [x] 审计 Ubuntu 网络、内核、BLE、编译与串口基础环境
+- [x] 执行 `scripts/setup_ubuntu_lab.sh` 并重新登录
+- [x] 运行 `scripts/check_lab_environment.sh`，得到 `ENVIRONMENT_OK`
 - [x] 通过 SSH 连接 Ubuntu 主机 `seb@192.168.31.195`
 - [x] 排查“浏览器可访问 Google，但 ping 无响应”
 - [x] 验证 FlClash HTTP 代理与 Meta TUN 路由
@@ -43,15 +46,15 @@
 - [x] 修复 Ubuntu 24.04 上 Codex bubblewrap/AppArmor sandbox
 - [x] 验证 Codex 可在只读沙箱内调用 shell
 
-## GitHub（暂缓）
+## GitHub
 
 - [x] 在 `E:\2026-linux` 初始化本地 Git 仓库
 - [x] 创建首次提交：`3ad1724 Add Linux networking study notes`
-- [ ] 创建 GitHub public 仓库 `2026-linux`
-- [ ] 添加 GitHub remote `origin`
-- [ ] 推送 `main` 分支
-- [ ] 验证 GitHub 上的 README 和 notes 文件完整
-- [ ] 确定今后每个实验通过验收后是否自动提交
+- [x] 创建 GitHub public 仓库 `2026-linux`
+- [x] 添加 GitHub remote `origin`
+- [x] 推送 `main` 分支
+- [x] 验证 GitHub 上的 README 和 notes 文件完整
+- [x] 今后课程新增或更新文档时，在当次任务完成后提交并推送
 
 ## 每个实验的固定验收问题
 
@@ -60,4 +63,3 @@
 - [ ] `tcpdump` 能看到什么？
 - [ ] 如果失败，我应该从哪里开始排查？
 - [ ] 这个知识与 Linux Driver、BLE、Digital Key 有什么关系？
-

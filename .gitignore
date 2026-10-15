@@ -1,3 +1,10 @@
+# Python
 __pycache__/
 *.py[cod]
+
+# Local editor and operating-system files
+.DS_Store
+*~
+*.swp
+*.swo
 
