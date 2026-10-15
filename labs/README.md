@@ -20,3 +20,9 @@ python3 labs/smoke_test.py
 
 自动预验收只证明环境和参考实现能够运行，不能代替手动抓包、现象观察和口头解释。
 
+需要 root 抓取 ARP、ICMP 和 TCP 标志时运行：
+
+```bash
+sudo bash scripts/run_packet_capture_preflight.sh
+```
+
