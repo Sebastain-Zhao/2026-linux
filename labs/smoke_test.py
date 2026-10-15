@@ -52,6 +52,7 @@ def main() -> None:
     check("required command ip", shutil.which("ip") is not None)
     check("required command ss", shutil.which("ss") is not None)
     check("required command nc", shutil.which("nc") is not None)
+    check("required command gcc", shutil.which("gcc") is not None)
 
     addresses = subprocess.check_output(["ip", "-brief", "-4", "addr"], text=True)
     routes = subprocess.check_output(["ip", "-4", "route"], text=True)
@@ -79,6 +80,20 @@ def main() -> None:
             check("Python TCP echo", client.recv(64) == b"TCP_OK")
     finally:
         stop(echo)
+
+    c_binary = "/tmp/2026-linux-c-tcp-echo"
+    subprocess.run(
+        ["gcc", "-std=c11", "-Wall", "-Wextra", "-Werror", str(ROOT / "c_tcp_echo.c"), "-o", c_binary],
+        check=True,
+        timeout=10,
+    )
+    c_server = subprocess.Popen([c_binary, "server", "8891"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    try:
+        time.sleep(0.15)
+        result = subprocess.check_output([c_binary, "client", "127.0.0.1", "8891", "C_TCP_OK"], text=True, timeout=5)
+        check("C socket TCP echo", result.strip() == "C_TCP_OK", result.strip())
+    finally:
+        stop(c_server)
 
     device = start("device_server.py", "--port", "8889")
     try:

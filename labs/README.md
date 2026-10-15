@@ -5,6 +5,7 @@
 ## 文件
 
 - `tcp_echo_server.py` / `tcp_echo_client.py`：TCP echo 与 socket 基本调用
+- `c_tcp_echo.c`：最小 C socket TCP echo server/client
 - `device_server.py` / `device_client.py`：文本设备控制协议，使用内存模拟 LED
 - `udp_server.py` / `udp_client.py`：UDP 请求/响应
 - `binary_protocol.py`：二进制帧、网络字节序与 CRC16
